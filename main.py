@@ -65,7 +65,7 @@ def run(playwright: Playwright) -> None:
         context = browser.new_context(**playwright.devices["Pixel 7"])
         page = context.new_page()
 
-        page.goto("https://indratogel31303.com/lite")
+        page.goto("https://up39987.com/lite")
         page.locator("#entered_login").fill(userid)
         page.locator("#entered_password").fill(pw)
         page.get_by_role("button", name="Login").click()
