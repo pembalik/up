@@ -21,17 +21,32 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
 
-      - name: Jalankan Bot
+      - name: Jalankan Bot 1
         run: |
-          echo "UTC Time: $(date -u '+%Y-%m-%d %H:%M:%S')"
-          echo "WIB Time: $(TZ='Asia/Jakarta' date '+%Y-%m-%d %H:%M:%S')"
+          echo "Running main.py"
           output=$(python main.py)
           echo "$output"
           if echo "$output" | grep -q "✅"; then
-            echo "✅ Workflow sukses"
-            exit 0
+            echo "✅ main.py sukses"
           else
-            echo "❌ Workflow gagal"
+            echo "❌ main.py gagal"
+          fi
+        continue-on-error: true
+        env:
+          userid: ${{ secrets.USERID }}
+          pw: ${{ secrets.PW }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Jalankan Bot 2
+        run: |
+          echo "Running main2.py"
+          output=$(python main2.py)
+          echo "$output"
+          if echo "$output" | grep -q "✅"; then
+            echo "✅ main2.py sukses"
+          else
+            echo "❌ main2.py gagal"
             exit 1
           fi
         env:
