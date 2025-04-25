@@ -1,4 +1,4 @@
-name: Scheduled nomorbet.txt Commit
+name: Scheduled config.txt Commit
 
 on:
   workflow_dispatch:
@@ -10,11 +10,11 @@ jobs:
       - name: Checkout kode
         uses: actions/checkout@v3
 
-      - name: Salin nomorbet.txt baru ke root
+      - name: Salin config.txt baru ke root
         run: |
-          cp update_staged/nomorbet.txt nomorbet.txt
+          cp update_staged/config.txt config.txt
           git config user.name "radit"
           git config user.email "radit@mcoel.com"
-          git add nomorbet.txt
-          git commit -m "Scheduled update for nomorbet.txt at 23:00 WIB"
+          git add config.txt
+          git commit -m "Scheduled update for config.txt at 23:00 WIB"
           git push origin main
