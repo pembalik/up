@@ -102,6 +102,7 @@ def run(playwright: Playwright) -> None:
             
             pesan_sukses = (
                 "[SUKSES]\n"
+                "[INDRA]\n"
                 f"🎯 TOTAL {jumlah_kombinasi} HARGA Rp. {bet}\n"
                 f"💸 BAYAR Rp. {total_bet_rupiah}\n"
                 f"💰 SALDO KAMU Rp. {saldo}\n"
