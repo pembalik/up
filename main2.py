@@ -117,7 +117,7 @@ def run(playwright: Playwright) -> None:
             except Exception as e:
                 saldo = "tidak diketahui"
                 print("⚠️ Gagal ambil saldo:", e)
-            kirim_telegram_log("GAGAL", f"[GAGAL]\n ❌ TOTAL {jumlah_kombinasi} HARGA Rp. {bet}\n 💸 BAYAR Rp. {total_bet_rupiah}\n 💰 SALDO KAMU Rp. {saldo}\n ⌚ {wib}")
+            kirim_telegram_log("GAGAL", f"[GAGAL]\n[INDRA]\n ❌ TOTAL {jumlah_kombinasi} HARGA Rp. {bet}\n 💸 BAYAR Rp. {total_bet_rupiah}\n 💰 SALDO KAMU Rp. {saldo}\n ⌚ {wib}")
 
 
         context.close()
