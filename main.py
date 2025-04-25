@@ -55,7 +55,7 @@ def parse_nomorbet(nomorbet: str):
 def run(playwright: Playwright) -> None:
     try:
         log_status("📂", "Membaca file nomorbet...")
-        nomorbet = baca_file("nomorbet.txt")
+        nomorbet = baca_file("config.txt")
         jumlah_kombinasi, bet = parse_nomorbet(nomorbet)
         total_bet_rupiah = bet * jumlah_kombinasi
         log_status("📬", f"Nomor ditemukan: {nomorbet}")
